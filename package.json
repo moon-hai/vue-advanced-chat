@@ -26,12 +26,12 @@
 		"url": "https://github.com/antoine92190/vue-advanced-chat/issues"
 	},
 	"homepage": "https://github.com/antoine92190/vue-advanced-chat#readme",
-	"main": "./dist/vue-advanced-chat.common.js",
+	"main": "./dist/vue-advanced-chat.common.ts",
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"build": "npm run clean:lib && npm run build:lib && npm run build:wc && npm run gen:types",
 		"clean:lib": "rimraf dist",
-		"build:lib": "vue-cli-service build --target lib --no-clean --name vue-advanced-chat ./src/ChatWindow/index.js",
+		"build:lib": "vue-cli-service build --target lib --no-clean --name vue-advanced-chat ./src/ChatWindow/index.ts",
 		"build:wc": "vue-cli-service build --target wc --no-clean --name vue-advanced-chat ./src/ChatWindow/ChatWindow.vue",
 		"prepublish": "npm run lint && npm run build",
 		"publish-beta": "npm publish --tag beta",
@@ -46,10 +46,14 @@
 		"vue": "^2.6.10"
 	},
 	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^2.33.0",
+		"@typescript-eslint/parser": "^2.33.0",
 		"@vue/cli-plugin-babel": "~4.5.0",
 		"@vue/cli-plugin-eslint": "~4.5.0",
+		"@vue/cli-plugin-typescript": "~4.5.0",
 		"@vue/cli-service": "~4.5.0",
 		"@vue/eslint-config-standard": "^4.0.0",
+		"@vue/eslint-config-typescript": "^5.0.2",
 		"babel-eslint": "^10.0.3",
 		"eslint": "^5.16.0",
 		"eslint-plugin-vue": "^5.0.0",
