@@ -15,7 +15,7 @@ export function detectMobile() {
 
 function getUserAgent() {
 	var userAgent =
-		navigator.userAgent || navigator.vendor || null
+		navigator.userAgent || navigator.vendor || (window as any).opera || null
 
 	if (!userAgent) throw new Error('Failed to look for user agent information.')
 
